@@ -1,0 +1,162 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMo9OxtvQGqv/8FRBG+1rnv",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/ttaavares/EngenheiroTavares/blob/main/Aula%2002\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 13,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1OGA2kmYFG16",
+        "outputId": "7899d116-2d9a-417b-eb5a-c4e7ccae3287"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Ângulo (graus)  Seno      \n",
+            "0               0.0000    \n",
+            "5               0.0872    \n",
+            "10              0.1736    \n",
+            "15              0.2588    \n",
+            "20              0.3420    \n",
+            "25              0.4226    \n",
+            "30              0.5000    \n",
+            "35              0.5736    \n",
+            "40              0.6428    \n",
+            "45              0.7071    \n",
+            "50              0.7660    \n",
+            "55              0.8192    \n",
+            "60              0.8660    \n",
+            "65              0.9063    \n",
+            "70              0.9397    \n",
+            "75              0.9659    \n",
+            "80              0.9848    \n",
+            "85              0.9962    \n",
+            "90              1.0000    \n",
+            "95              0.9962    \n",
+            "100             0.9848    \n",
+            "105             0.9659    \n",
+            "110             0.9397    \n",
+            "115             0.9063    \n",
+            "120             0.8660    \n",
+            "125             0.8192    \n",
+            "130             0.7660    \n",
+            "135             0.7071    \n",
+            "140             0.6428    \n",
+            "145             0.5736    \n",
+            "150             0.5000    \n",
+            "155             0.4226    \n",
+            "160             0.3420    \n",
+            "165             0.2588    \n",
+            "170             0.1736    \n",
+            "175             0.0872    \n",
+            "180             0.0000    \n",
+            "185             -0.0872   \n",
+            "190             -0.1736   \n",
+            "195             -0.2588   \n",
+            "200             -0.3420   \n",
+            "205             -0.4226   \n",
+            "210             -0.5000   \n",
+            "215             -0.5736   \n",
+            "220             -0.6428   \n",
+            "225             -0.7071   \n",
+            "230             -0.7660   \n",
+            "235             -0.8192   \n",
+            "240             -0.8660   \n",
+            "245             -0.9063   \n",
+            "250             -0.9397   \n",
+            "255             -0.9659   \n",
+            "260             -0.9848   \n",
+            "265             -0.9962   \n",
+            "270             -1.0000   \n",
+            "275             -0.9962   \n",
+            "280             -0.9848   \n",
+            "285             -0.9659   \n",
+            "290             -0.9397   \n",
+            "295             -0.9063   \n",
+            "300             -0.8660   \n",
+            "305             -0.8192   \n",
+            "310             -0.7660   \n",
+            "315             -0.7071   \n",
+            "320             -0.6428   \n",
+            "325             -0.5736   \n",
+            "330             -0.5000   \n",
+            "335             -0.4226   \n",
+            "340             -0.3420   \n",
+            "345             -0.2588   \n",
+            "350             -0.1736   \n",
+            "355             -0.0872   \n",
+            "360             -0.0000   \n"
+          ]
+        }
+      ],
+      "source": [
+        "import math\n",
+        "\n",
+        "# Cabeçalho da tabela\n",
+        "print(f\"{'Ângulo (graus)':<15} {'Seno':<10}\")\n",
+        "\n",
+        "#Gera os valores dos ângulo de 0° a 360° com intervalos de 5°\n",
+        "for angulo in range(0, 361, 5):\n",
+        "  #Converte o ângulo de graus para radianos\n",
+        "  radianos = math.radians(angulo)\n",
+        "  #Calcula o seno do ângulo\n",
+        "  seno = math.sin(radianos)\n",
+        "  # Exibe o ângulo e seu seno correspondente\n",
+        "  print(f\"{angulo:<15} {seno:<10.4f}\")"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Solicitar ao usuário que insira a quantidade de alunos\n",
+        "n = int(input(\"Digite a quantidade de aluos:\"))\n",
+        "\n",
+        "#Inicializa a variavél para armazenar a soma das médias\n",
+        "soma_das_medias=0\n",
+        "\n",
+        "#Laço para calcular a média de cada aluno\n",
+        "for i in range(1, n + 1):\n",
+        "  print(f\"\\nAluno {i}:\")\n",
+        "  n1 = float(input(\"Digite a nota N1:\"))\n",
+        "  n2 = float(input(\"Digite a nota N2:\"))\n",
+        "\n",
+        "  #Calcula a média do aluno\n",
+        "  media = (n1 + n2) // 2"
+      ],
+      "metadata": {
+        "id": "9vPQZ9E9O-Qo"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
